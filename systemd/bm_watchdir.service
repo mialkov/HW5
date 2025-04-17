@@ -1,0 +1,12 @@
+[Unit]
+Description=Watch ~/watch directory and process new files
+After=network.target
+
+[Service]
+Type=simple
+User=bob         # заміни, якщо інший
+ExecStart=/home/bob/HW5/scripts/bm_watch_dir.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
